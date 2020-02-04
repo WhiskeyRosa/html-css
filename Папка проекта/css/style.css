@@ -254,6 +254,7 @@ body {
 /*reviews*/
 
 .reviews {
+    padding: 50px 50px 50px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -276,7 +277,7 @@ body {
 .reviews-title {
     display: block;
     width: 100%;
-    margin: 50px 0 35px 0;
+    margin: 0 0 35px 0;
     color: #445161;
     text-align: center;
     font-size: 30px;
@@ -287,14 +288,13 @@ body {
 .review-item_photo {
     width: 75px;
     height: 75px;
-    margin: 0px 10px 105px 0;
+    margin: 0px 20px 75px 0;
     background-color: #445161;
     border-radius: 50%;
 }
 
 .review-item_txt {
     width: 80%;
-    margin: 15px 20px 50px 10px;
     padding: 15px 20px 0px 15px;
     border-radius: 5px;
     background-color: #ebebeb;
@@ -315,7 +315,7 @@ body {
 
 .review-item-name {
     display: block;
-    padding: 15px 0 15px 0px;
+    margin: 15px 0 15px 0px;
     font-size: 14px;
     font-weight: normal;
     line-height: 1.29;
@@ -395,13 +395,14 @@ body {
     outline: none;
 }
 
-.prices-item-buy:active {
+.prices-item-buy:focus {
     outline: none;
 }
 
 /*    footer*/
 
 .footer {
+    padding: 50px 0 0 0;
     width: 100%;
     background-color: #445162;
     font-family: Arial;
@@ -417,7 +418,7 @@ body {
 .footer-title {
     width: 100%;
     display: block;
-    padding: 50px 0 30px 0;
+    padding: 0 0 30px 0;
     text-align: center;
     line-height: 1.2;
     font-size: 30px;
@@ -432,6 +433,7 @@ body {
 }
 
 .footer-form-input {
+    display: block;
     min-width: 500px;
     min-height: 40px;
     border-radius: 5px;
@@ -477,92 +479,73 @@ body {
     outline: none;
 }
 
-.footer-form-btn:active {
+.footer-form-btn:focus {
     outline: none;
 }
 
 .footer-contacts {
-    font-family: Arial;
+    width: 241px;
+    margin: 0;
+    float: left;
+}
+
+.footer-contacts-link {
+    display: block;
+    margin: 0 0 15px 0;
+    color: white;
+    padding: 0 0 0 30px;
+    position: relative;
     font-size: 16px;
-    font-weight: normal;
+    font-family: Arial;
     line-height: 1.5;
-    letter-spacing: normal;
-    color: #ffffff;
+    text-align: left;
 }
 
-.footer-contacts-skype {
-    position: relative;
-    margin: 0 0 0 0;
+.footer-contacts-link:last-of-type {
+    margin: 0 0 32px 0;
 }
 
-.footer-contacts-skype:before {
+.footer-contacts-link::before {
     content: "";
     display: block;
-    width: 30px;
-    height: 30px;
-    background-image: url(../img/skype%20icon.png);
-    -webkit-background-size: cover;
+    width: 25px;
+    height: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-    right: 390px;
-    top: -3px;
+    left: 0;
 }
 
-.footer-contacts-icq {
-    position: relative;
+.footer-contacts-link:nth-of-type(1):before {
+    background-image: url('../img/skype-brands.svg');
 }
 
-.footer-contacts-icq:before {
-    content: "";
+.footer-contacts-link:nth-of-type(2):before {
+    background-image: url('../img/fan-solid.svg');
+}
+
+.footer-contacts-link:nth-of-type(3):before {
+    background-image: url('../img/at-solid.svg');
+}
+
+.footer-contacts-link:nth-of-type(4):before {
+    background-image: url('../img/phone-solid.svg');
+}
+
+
+.footer-contacts-icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-contacts-net {
     display: block;
-    width: 30px;
-    height: 30px;
-    background-image: url(../img/icq%20icon.png);
-    -webkit-background-size: cover;
-    background-size: cover;
-    position: absolute;
-    right: 390px;
-    top: -3px;
-}
-
-.footer-contacts-mail {
-    position: relative;
-}
-
-.footer-contacts-mail:before {
-    content: "";
-    display: block;
-    width: 30px;
-    height: 30px;
-    background-image: url(../img/email%20icon.png);
-    -webkit-background-size: cover;
-    background-size: cover;
-    position: absolute;
-    right: 390px;
-    top: -3px;
-}
-
-.footer-contacts-phone {
-    position: relative;
-}
-
-.footer-contacts-phone:before {
-    content: "";
-    display: block;
-    width: 30px;
-    height: 30px;
-    background-image: url(../img/phone%20icon.png);
-    -webkit-background-size: cover;
-    background-size: cover;
-    position: absolute;
-    right: 390px;
-    top: -3px;
-}
-
-
-.footer-social-img {
-    background-color: white;
+    width: 42px;
+    height: 42px;
+    box-sizing: border-box;
     border-radius: 100%;
+    background-color: white;
 }
 
 .copy {
